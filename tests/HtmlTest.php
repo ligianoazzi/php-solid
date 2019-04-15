@@ -1,11 +1,14 @@
 <?php
 
-namespace lda\solid;
+namespace lda\Solid;
 
 class HtmlTest extends \PHPUnit\Framework\TestCase
 {
 	public function testEsteEUmSimplesExemploDeTeste()
 	{
-		$this->assertTrue(true);
+		$html = new Html;
+		$img = $html->img('images/photo.jpg');
+
+		$this->assertEquals('<img src="images/photo.jpg">', $img);
 	}
 }
